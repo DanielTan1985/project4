@@ -1,10 +1,15 @@
 
 
 
+
 Authorization:
+
 GET /api/test/all
+
 GET /api/test/user for loggedin users (user/moderator/admin)
+
 GET /api/test/mod for moderator
+
 GET /api/test/admin for admin
 
 POST : /api/auth/signin
