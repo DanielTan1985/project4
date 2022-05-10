@@ -1,4 +1,4 @@
-
+npm install express sequelize pg pg-hstore body-parser cors jsonwebtoken bcryptjs --save
 
 
 
