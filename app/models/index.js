@@ -38,6 +38,17 @@ db.user.belongsToMany(db.role, {
   otherKey: "roleId"
 });
 
+db.location = require("./location.model.js")(sequelize, Sequelize);
+db.cuisine = require("./cuisine.model.js")(sequelize, Sequelize);
+db.price = require("./price.model.js")(sequelize, Sequelize);
+
+db.cuisine.belongsTo(db.location, {
+  foreignKey: "cuisineId",
+});
+db.price.belongsTo(db.location, {
+  foreignKey: "priceId",
+});
+
 db.ROLES = ["user", "admin", "moderator"];
 
 module.exports = db;
