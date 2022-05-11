@@ -3,8 +3,6 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 const app = express(); 
 
-
-
 var corsOptions = {
   origin: "http://localhost:8081"
 };
@@ -19,6 +17,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // database
 const db = require("./app/models");
+
+
+
 const Role = db.role;
 
 // db.sequelize.sync();
@@ -35,10 +36,9 @@ app.get("/", (req, res) => {
 });
 
 // routes
-require('./app/routes/auth.routes')(app);
-require('./app/routes/user.routes')(app);
 
-
+const authRouter = require('./app/routes/auth.routes');
+app.use("/api/auth", authRouter);
 
 
 // set port, listen for requests
