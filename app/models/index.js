@@ -1,6 +1,6 @@
 const config = require("../config/db.config.js");
-
-const Sequelize = require("sequelize");
+console.log("DB Config", config);
+const {Sequelize} = require("sequelize");
 const sequelize = new Sequelize(
   config.DB,
   config.USER,
@@ -16,6 +16,12 @@ const sequelize = new Sequelize(
     //   acquire: config.pool.acquire,
     //   idle: config.pool.idle
     // }
+    dialectOptions:{
+      ssl:{
+        required:true,
+        rejectUnauthorized:false
+      }
+    }
   }
 );
 
