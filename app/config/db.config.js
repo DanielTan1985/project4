@@ -1,9 +1,9 @@
 module.exports = {
-  HOST: "localhost",
-  USER: "postgres",
-  PASSWORD: "1234qwer",
-  DB: "d7r4o5vvh2upn9",
-  dialect: "postgres",
+  HOST: "./dev.sqlite",
+  USER: "USER",
+  PASSWORD: "PASSWORD",
+  DB: "DB",
+  dialect: "sqlite",
   pool: {
     max: 5,
     min: 0,
