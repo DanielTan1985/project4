@@ -7,6 +7,7 @@ const controller = require("../controllers/auth.controller");
 router.use(function(req, res, next) {
   res.header(
     "Access-Control-Allow-Headers",
+    "Access-Control-Allow-Origin : *",
     "x-access-token, Origin, Content-Type, Accept",
     //3 - 1107pm 
     "Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE",
