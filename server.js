@@ -42,17 +42,12 @@ app.get("/", (req, res) => {
 // routes
 
 const authRouter = require('./app/routes/auth.routes');
-// const userRoutes = require("./app/routes/user.routes");
-// const publicRoutes = require("./app/routes/public.routes");
-
-// app.use("/api/user", userRoutes);
-// app.use("/api/public", publicRoutes);
 app.use("/api/auth", authRouter);
 
-// //amy
-// app.use(userRoutes);
-// app.use(publicRoutes);
-// app.use(authRoutes);
+//Test router
+const userRouter = require("./app/routes/user.routes");
+app.use("/api/user", userRouter);
+
 
 // set port, listen for requests
 const PORT = process.env.PORT || 8080;
