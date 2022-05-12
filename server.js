@@ -3,9 +3,7 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 const app = express(); 
 app.use(express.json()); // Enable express to parse JSON as request body.
-const userRoutes = require("./routes/user.routes");
-const publicRoutes = require("./routes/public.routes");
-const authRoutes = require('./routes/auth.routes');
+
 
 
 var corsOptions = {
@@ -44,6 +42,11 @@ app.get("/", (req, res) => {
 // routes
 
 const authRouter = require('./app/routes/auth.routes');
+const userRoutes = require("./app/routes/user.routes");
+const publicRoutes = require("./app/routes/public.routes");
+
+app.use("/routes", userRoutes);
+app.use("/routes", publicRoutes);
 app.use("/api/auth", authRouter);
 
 //amy
