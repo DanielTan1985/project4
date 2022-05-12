@@ -5,12 +5,12 @@ const app = express();
 app.use(express.json()); // Enable express to parse JSON as request body.
 
 
+//Cors Option commmented away 120522 
+// var corsOptions = {
+//   origin: "http://localhost:8081"
+// };
 
-var corsOptions = {
-  origin: "http://localhost:8081"
-};
-
-app.use(cors(corsOptions));
+// app.use(cors(corsOptions));
 
 // parse requests of content-type - application/json
 app.use(bodyParser.json());
@@ -42,6 +42,11 @@ app.get("/", (req, res) => {
 // routes
 
 const authRouter = require('./app/routes/auth.routes');
+//
+
+
+
+//
 app.use("/api/auth", authRouter);
 
 //Test router
