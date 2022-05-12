@@ -26,11 +26,11 @@ module.exports = (sequelize, Sequelize) => {
       field: "price",
     },
     createdAt: {
-      type: DataTypes.FROM_TZ,
+      type: Sequelize.FROM_TZ,
       field: "createdAt",
     },
     updatedAt: {
-      type: DataTypes.FROM_TZ,
+      type: Sequelize.FROM_TZ,
       field: "updatedAt",
     },
   });
