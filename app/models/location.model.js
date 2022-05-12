@@ -25,14 +25,7 @@ module.exports = (sequelize, Sequelize) => {
       allowNull: false,
       field: "price",
     },
-    createdAt: {
-      type: DataTypes.TIMESTAMP,
-      field: "createdAt",
-    },
-    updatedAt: {
-      type: DataTypes.TIMESTAMP,
-      field: "updatedAt",
-    },
+
   });
 
   return Location;

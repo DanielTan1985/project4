@@ -8,14 +8,7 @@ module.exports = (sequelize, Sequelize) => {
     cost: {
       type: Sequelize.STRING,
     },
-    createdAt: {
-      type: Sequelize.TIMESTAMP,
-      field: "createdAt",
-    },
-    updatedAt: {
-      type: Sequelize.TIMESTAMP,
-      field: "updatedAt",
-    },
+
   });
 
   return Price;

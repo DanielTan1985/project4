@@ -8,14 +8,7 @@ module.exports = (sequelize, Sequelize) => {
     type_of_food: {
       type: Sequelize.STRING,
     },
-    createdAt: {
-      type: Sequelize.TIMESTAMP,
-      field: "createdAt",
-    },
-    updatedAt: {
-      type: Sequelize.TIMESTAMP,
-      field: "updatedAt",
-    },
+
   });
 
   return Cuisine;
