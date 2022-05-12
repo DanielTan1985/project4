@@ -1,14 +1,14 @@
-//amy
-const express = require("express");
-const app = express();
-app.use(express.json()); // Enable express to parse JSON as request body.
+// //amy
+// const express = require("express");
+// const app = express();
+// app.use(express.json()); // Enable express to parse JSON as request body.
 
-const userRoutes = require("./user.routes");
-const publicRoutes = require("./public.routes");
-const authRoutes = require('./auth.routes');
+// const userRoutes = require("./user.routes");
+// const publicRoutes = require("./public.routes");
+// const authRoutes = require('./auth.routes');
 
-app.use(userRoutes);
-app.use(publicRoutes);
-app.use(authRoutes);
+// app.use(userRoutes);
+// app.use(publicRoutes);
+// app.use(authRoutes);
 
-module.exports = app;
+// module.exports = app;

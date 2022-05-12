@@ -2,6 +2,11 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const app = express(); 
+app.use(express.json()); // Enable express to parse JSON as request body.
+const userRoutes = require("./user.routes");
+const publicRoutes = require("./public.routes");
+const authRoutes = require('./auth.routes');
+
 
 var corsOptions = {
   origin: "http://localhost:8081"
@@ -14,6 +19,7 @@ app.use(bodyParser.json());
 
 // parse requests of content-type - application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: true }));
+
 
 // database
 const db = require("./app/models");
@@ -40,6 +46,10 @@ app.get("/", (req, res) => {
 const authRouter = require('./app/routes/auth.routes');
 app.use("/api/auth", authRouter);
 
+//amy
+app.use(userRoutes);
+app.use(publicRoutes);
+app.use(authRoutes);
 
 // set port, listen for requests
 const PORT = process.env.PORT || 8080;
@@ -63,3 +73,4 @@ function initial() {
     name: "admin"
   });
 }
+
