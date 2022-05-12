@@ -103,9 +103,13 @@ router.get("/users/user", (req, res) => {
 });
 
 router.get("/users/cuisine", async (req, res) => {
+  try{
   const results = await Cuisine.findAll();
 
   return res.send(JSON.stringify(results));
+} catch(err){
+  console.error(err);
+}
 });
 
 router.get("/users/price", async (req, res) => {
