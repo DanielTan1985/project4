@@ -49,10 +49,10 @@ app.use("/routes", userRoutes);
 app.use("/routes", publicRoutes);
 app.use("/api/auth", authRouter);
 
-//amy
-app.use(userRoutes);
-app.use(publicRoutes);
-app.use(authRoutes);
+// //amy
+// app.use(userRoutes);
+// app.use(publicRoutes);
+// app.use(authRoutes);
 
 // set port, listen for requests
 const PORT = process.env.PORT || 8080;
