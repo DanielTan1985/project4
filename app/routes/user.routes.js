@@ -67,9 +67,9 @@ const { authJwt } = require("../middleware");
 const controller = require("../controllers/user.controller");
 
 //Farhan 120522 2015Hrs
-// const { Cuisine, Price } = require("../models");
-const Cuisine = require("../models/cuisine.model");
-const Price = require("../models/price.model")
+const { Cuisine, Price } = require("../models");
+// const Cuisine = require("../models/cuisine.model");
+// const Price = require("../models/price.model")
 
 
 const locationController = new LocationController();
