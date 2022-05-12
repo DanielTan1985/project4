@@ -3,9 +3,9 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 const app = express(); 
 app.use(express.json()); // Enable express to parse JSON as request body.
-const userRoutes = require("./user.routes");
-const publicRoutes = require("./public.routes");
-const authRoutes = require('./auth.routes');
+const userRoutes = require("../routes/user.routes");
+const publicRoutes = require("../routes/public.routes");
+const authRoutes = require('../routes/auth.routes');
 
 
 var corsOptions = {
