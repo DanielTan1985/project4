@@ -9,11 +9,11 @@ module.exports = (sequelize, Sequelize) => {
       type: Sequelize.STRING,
     },
     createdAt: {
-      type: Sequelize.CURRENT_TIMESTAMP,
+      type: Sequelize.FROM_TZ,
       field: "createdAt",
     },
     updatedAt: {
-      type: Sequelize.CURRENT_TIMESTAMP,
+      type: Sequelize.FROM_TZ,
       field: "updatedAt",
     },
   });
