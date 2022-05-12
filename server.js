@@ -5,12 +5,14 @@ const app = express();
 app.use(express.json()); // Enable express to parse JSON as request body.
 
 
-//Cors Option commmented away 120522 
-// var corsOptions = {
-//   origin: "http://localhost:8081"
-// };
 
-// app.use(cors(corsOptions));
+var corsOptions = {
+  origin: "http://localhost:3000",
+  credentials: true,
+  optionSuccessStatus:200
+};
+
+app.use(cors(corsOptions));
 
 // parse requests of content-type - application/json
 app.use(bodyParser.json());
