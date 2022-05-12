@@ -101,16 +101,31 @@ router.get(
 router.get("/users/user", (req, res) => {
   return res.send("You have called a user route");
 });
+//
+const cuisine1 = () => {
+  return models.results.findAll({
+    attributes: ['id','type_of_food']
+  });
+};
 
-router.get("/users/cuisine", async (req, res) => {
-  try{
-  const results = await Cuisine.findAll();
 
-  return res.send(JSON.stringify(results));
-} catch(err){
-  console.error(err);
-}
+router.get(`/users/cuisine`, async (req, res) => {
+  try {
+      const results = await queries.cuisine1();
+      res.status(200).json(results);
+  } catch (error) {
+      res.status(500).send(error)
+  }
 });
+
+//
+
+//TESTING !!!
+// router.get("/users/cuisine", async (req, res) => {
+//   const results = await Cuisine.findAll();
+
+//   return res.send(JSON.stringify(results));
+// });
 
 router.get("/users/price", async (req, res) => {
   const results = await Price.findAll();
