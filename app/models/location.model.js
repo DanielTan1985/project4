@@ -9,6 +9,10 @@ module.exports = (sequelize, Sequelize) => {
       type: Sequelize.STRING,
       allowNull: false,
     },
+    address: {
+      type: Sequelize.STRING,
+      allowNull: false,
+    },
     located_at: {
       type: Sequelize.STRING,
       allowNull: false,

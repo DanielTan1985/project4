@@ -102,25 +102,11 @@ router.get("/users/user", (req, res) => {
   return res.send("You have called a user route");
 });
 
+router.get("/users/cuisine", async (req, res) => {
+  const results = await Cuisine.findAll();
 
-//
-const cuisine = require("../models/cuisine.model");
-router.get('/users/cuisine',(req, res, next) => {
-    cuisine.findAll()
-    .then ( results => {
-       res.send(results)
-     } )
-    .catch(next); // error passed on to the error handling route
-})
-
-//
-
-//TESTING !!!
-// router.get("/users/cuisine", async (req, res) => {
-//   const results = await Cuisine.findAll();
-
-//   return res.send(JSON.stringify(results));
-// });
+  return res.send(JSON.stringify(results));
+});
 
 router.get("/users/price", async (req, res) => {
   const results = await Price.findAll();

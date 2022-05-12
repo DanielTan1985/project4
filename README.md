@@ -4,6 +4,7 @@ npm install express sequelize pg pg-hstore body-parser cors jsonwebtoken bcryptj
 
 Authorization:
 
+https://gentle-fortress-35413.herokuapp.com/api/user/all
 GET /api/test/all
 
 GET /api/test/user for loggedin users (user/moderator/admin)
