@@ -25,14 +25,14 @@ module.exports = (sequelize, Sequelize) => {
       allowNull: false,
       field: "price",
     },
-    // createdAt: {
-    //     type: DataTypes.DATE,
-    //     field: "created_at",
-    // },
-    // updatedAt: {
-    //     type: DataTypes.DATE,
-    //     field: "updated_at",
-    // },
+    createdAt: {
+      type: DataTypes.DATE,
+      field: "createdAt",
+    },
+    updatedAt: {
+      type: DataTypes.DATE,
+      field: "updatedAt",
+    },
   });
 
   return Location;
