@@ -42,11 +42,11 @@ app.get("/", (req, res) => {
 // routes
 
 const authRouter = require('./app/routes/auth.routes');
-const userRoutes = require("./app/routes/user.routes");
-const publicRoutes = require("./app/routes/public.routes");
+// const userRoutes = require("./app/routes/user.routes");
+// const publicRoutes = require("./app/routes/public.routes");
 
-app.use("/api/user", userRoutes);
-app.use("/api/public", publicRoutes);
+// app.use("/api/user", userRoutes);
+// app.use("/api/public", publicRoutes);
 app.use("/api/auth", authRouter);
 
 // //amy
