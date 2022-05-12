@@ -101,7 +101,10 @@ router.get(
 router.get("/users/user", (req, res) => {
   return res.send("You have called a user route");
 });
+
+
 //
+const cuisine = require("../models/cuisine.model");
 router.get('/users/cuisine',(req, res, next) => {
     cuisine.findAll()
     .then ( results => {
