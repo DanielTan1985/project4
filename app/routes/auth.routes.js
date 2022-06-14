@@ -6,12 +6,11 @@ const controller = require("../controllers/auth.controller");
 
 router.use(function(req, res, next) {
 
+  //here cors is used to allow cross origin resource sharing
   res.header(
     "Access-Control-Allow-Headers",
+    "Access-Control-Allow-Origin : *",
 
-    "access-control-allow-origin', true",
-    //"Access-Control-Allow-Origin : *",
-    
     "x-access-token, Origin, Content-Type, Accept",
     "Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE",
     "Access-Control-Allow-Headers', 'X-Requested-With,content-type",
