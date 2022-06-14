@@ -8,12 +8,28 @@ app.use(express.json()); // Enable express to parse JSON as request body.
 
 var corsOptions = {
   // origin: "https://gentle-fortress-35413.herokuapp.com",
-  origin: "http://localhost:3000/",
-  credentials: true,
-  optionSuccessStatus:200
+  origin: 'http://localhost:3000',
+  // credentials: true,
+  optionSuccessStatus:200,
 };
 
-app.use(cors(corsOptions));
+// app.use(cors(corsOptions));
+
+// app.use((req, res, next) => {
+//   res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000", "https://gentle-fortress-35413.herokuapp.com");
+//   res.header(
+//     "Access-Control-Allow-Headers",
+//     "Origin, X-Requested-With, Content-Type, Accept"
+//   );
+//   next();
+// });
+
+
+
+
+
+
+
 
 // parse requests of content-type - application/json
 app.use(bodyParser.json());
