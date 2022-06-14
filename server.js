@@ -6,24 +6,24 @@ app.use(express.json()); // Enable express to parse JSON as request body.
 
 //update
 
-var corsOptions = {
-  // origin: "https://gentle-fortress-35413.herokuapp.com",
-  // origin: "http://localhost:3000",
-  origin: "https://gentle-fortress-35413.herokuapp.com/api/auth/signup",
-  credentials: false,
-  optionSuccessStatus:200,
-};
-
+// var corsOptions = {
+//   // origin: "https://gentle-fortress-35413.herokuapp.com",
+//   origin: "http://localhost:3000",
+//   // origin: "https://gentle-fortress-35413.herokuapp.com/api/auth/signup",
+//   credentials: true,
+//   optionSuccessStatus:200,
+// };
 // app.use(cors(corsOptions));
 
-// app.use((req, res, next) => {
-//   res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000", "https://gentle-fortress-35413.herokuapp.com");
-//   res.header(
-//     "Access-Control-Allow-Headers",
-//     "Origin, X-Requested-With, Content-Type, Accept"
-//   );
-//   next();
-// });
+
+app.use((req, res, next) => {
+  res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000", "https://gentle-fortress-35413.herokuapp.com");
+  res.header(
+    "Access-Control-Allow-Headers",
+    "Origin, X-Requested-With, Content-Type, Accept"
+  );
+  next();
+});
 
 
 
