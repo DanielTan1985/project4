@@ -6,15 +6,15 @@ app.use(express.json()); // Enable express to parse JSON as request body.
 
 //update
 
-// var corsOptions = {
-//   origin: "https://gentle-fortress-35413.herokuapp.com",
-//   // origin: "http://localhost:3000",
+var corsOptions = {
+  origin: "*",
+  // origin: "https://gentle-fortress-35413.herokuapp.com",
+  // origin: "http://localhost:3000",
+  credentials: true,
+  optionSuccessStatus:200
+};
 
-//   credentials: true,
-//   optionSuccessStatus:200
-// };
-
-// app.use(cors(corsOptions));
+app.use(cors(corsOptions));
 
 // parse requests of content-type - application/json
 app.use(bodyParser.json());
