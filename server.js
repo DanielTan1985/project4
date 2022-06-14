@@ -1,19 +1,19 @@
 const express = require("express");
 const bodyParser = require("body-parser");
-// const cors = require("cors");
+const cors = require("cors");
 const app = express(); 
 app.use(express.json()); // Enable express to parse JSON as request body.
 
 //update
 
-// var corsOptions = {
-//   // origin: "https://gentle-fortress-35413.herokuapp.com",
-//   origin: "http://localhost:3000",
-//   // origin: "https://gentle-fortress-35413.herokuapp.com/api/auth/signup",
-//   credentials: true,
-//   optionSuccessStatus:200,
-// };
-// app.use(cors(corsOptions));
+var corsOptions = {
+  // origin: "https://gentle-fortress-35413.herokuapp.com",
+  origin: "http://localhost:3000",
+  // origin: "https://gentle-fortress-35413.herokuapp.com/api/auth/signup",
+  // credentials: true,
+  // optionSuccessStatus:200,
+};
+app.use(cors(corsOptions));
 
 // //unable to work. ignore this part for cors
 // app.use((req, res, next) => {
