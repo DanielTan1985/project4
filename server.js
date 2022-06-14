@@ -28,9 +28,10 @@ const db = require("./app/models");
 
 const Role = db.role;
 
+//MYSQL3
 // db.sequelize.sync();
 // force: true will drop the table if it already exists
-//********************************************************************************************************* */
+// 
 // db.sequelize.sync({force: true}).then(() => {
 //   console.log('Drop and Resync Database with { force: true }');
 //   initial();

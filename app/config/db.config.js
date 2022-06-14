@@ -18,7 +18,7 @@
 
 
 
-//testing
+
 
 module.exports = {
   HOST: "ec2-54-80-122-11.compute-1.amazonaws.com",
