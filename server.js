@@ -1,6 +1,6 @@
 const express = require("express");
 const bodyParser = require("body-parser");
-const cors = require("cors");
+// const cors = require("cors");
 const app = express(); 
 app.use(express.json()); // Enable express to parse JSON as request body.
 
@@ -15,15 +15,15 @@ app.use(express.json()); // Enable express to parse JSON as request body.
 // };
 // app.use(cors(corsOptions));
 
-
-app.use((req, res, next) => {
-  res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000", "https://gentle-fortress-35413.herokuapp.com");
-  res.header(
-    "Access-Control-Allow-Headers",
-    "Origin, X-Requested-With, Content-Type, Accept"
-  );
-  next();
-});
+// //unable to work. ignore this part for cors
+// app.use((req, res, next) => {
+//   res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000", "https://gentle-fortress-35413.herokuapp.com");
+//   res.header(
+//     "Access-Control-Allow-Headers",
+//     "Origin, X-Requested-With, Content-Type, Accept"
+//   );
+//   next();
+// });
 
 
 
